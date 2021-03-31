@@ -5,7 +5,7 @@ import { Link } from 'gatsby';
 const Header  = () => {
     return (
         <div>
-            <h1>Crypt Mystic Tarot</h1>
+            <h1>Icy Codes</h1>
             <nav>
                 <ul>
                     <li><Link to="../blog">Writings</Link> </li>
@@ -19,4 +19,4 @@ const Header  = () => {
     )
 }
 
-export default Header;
+export default Header; 
