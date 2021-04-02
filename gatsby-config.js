@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: 'Icy Codes',
-    author: 'Zahra Dabirzadeh'
+    author: 'Chessa'
 
   },
   plugins: [`gatsby-plugin-sass`],
