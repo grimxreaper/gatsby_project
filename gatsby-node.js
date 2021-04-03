@@ -1,5 +1,15 @@
-module.exports.onCreateNode = ({ node, actions }) => {
-    const { createNodeField } = actions
+const path = require("path")
 
-    consolg.log(JSON.stringify(node, undefined, 4))
+module.exports.onCreateNode = ({ node, actions }) => {
+  const { createNodeField } = actions
+
+  if (node.internal.type === "MarkdownRemark") {
+    const slug = path.basename(node.fileAbsolutePath, ".md")
+    
+    createNodeField({ //to add the new field onto the node
+        node,
+        name: 'slug',
+        value: slug
+    })
+  }
 }
