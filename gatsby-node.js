@@ -7,9 +7,9 @@ module.exports.onCreateNode = ({ node, actions }) => {
     const slug = path.basename(node.fileAbsolutePath, ".md")
     
     createNodeField({ //to add the new field onto the node
-        node,
+        node, //the node we're trying to create the new field on
         name: 'slug',
-        value: slug
+        value: slug 
     })
   }
 }
