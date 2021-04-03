@@ -14,7 +14,7 @@ module.exports.onCreateNode = ({ node, actions }) => {
   }
 }
 
-module.exports.createPages = ({ graphql, actions }) => {
+module.exports.createPages = async ({ graphql, actions }) => {
     const { createPage } = actions 
     const blogTemplate = path.resolve('./src/templates/blog.js')
 
@@ -22,7 +22,7 @@ module.exports.createPages = ({ graphql, actions }) => {
     //we've been importing, this is a function itself that we pass a string graphql query to
     //this graphql function actually returns a promise, and we'll be using async to handle it
 
-    graphql(`
+    const response = await graphql(`
         query {
             allMarkdownRemark {
                 edges {
