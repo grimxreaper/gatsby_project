@@ -5,6 +5,8 @@ date: "2021-04-02"
 
 I just shared my portfolio!
 
+![Balloons](./alphabet.jpg)
+
 ##Topics Covered
 
 1. UX
