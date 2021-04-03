@@ -1,5 +1,5 @@
 ---
-title: "The Great Gatsby Bootcamp"
+title: "Getting started with Design"
 date: "2021-04-02"
 ---
 
