@@ -19,12 +19,14 @@
     "gatsby-plugin-sharp": "^3.2.0",
     "gatsby-remark-images": "^4.2.0",
     "gatsby-remark-relative-images": "^2.0.2",
+    "gatsby-source-contentful": "^5.2.0",
     "gatsby-source-filesystem": "^3.2.0",
     "gatsby-transformer-remark": "^3.2.0",
     "node-sass": "^5.0.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "sass": "^1.32.8"
+    "sass": "^1.32.8",
+    "yarn": "^1.22.10"
   },
   "devDependencies": {
     "env-cmd": "^10.1.0",

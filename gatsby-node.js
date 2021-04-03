@@ -13,7 +13,7 @@ module.exports.onCreateNode = ({ node, actions }) => {
       value: slug,
     })
   }
-}
+};
 
 //1. get path to template
 //2. get markdown data
@@ -39,7 +39,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
         }
       }
     }
-  `)
+  `);
 
   //we can now do something with the response, we want to iterate over all
   //those posts and run the createPage function for each of them
