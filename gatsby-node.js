@@ -1,6 +1,5 @@
 const path = require("path")
 
-
 module.exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
   const blogTemplate = path.resolve("./src/templates/blog.js")
@@ -11,12 +10,10 @@ module.exports.createPages = async ({ graphql, actions }) => {
 
   const response = await graphql(`
     query {
-      allMarkdownRemark {
+      allContentfulBlogPost {
         edges {
           node {
-            fields {
-              slug
-            }
+            slug
           }
         }
       }
@@ -26,12 +23,12 @@ module.exports.createPages = async ({ graphql, actions }) => {
   //we can now do something with the response, we want to iterate over all
   //those posts and run the createPage function for each of them
 
-  response.data.allMarkdownRemark.edges.forEach(edge => {
+  response.data.allContentfulBlogPost.edges.forEach(edge => {
     createPage({
       component: blogTemplate,
       path: `/blog/${edge.node.fields.slug}`,
       context: {
-        slug: edge.node.fields.slug,
+        slug: edge.node.slug,
       },
     })
   })
