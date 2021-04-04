@@ -21,23 +21,22 @@ query($slug: String!) {
     title
     publishedDate(formatString: "MMMM Do, YYYY")
     body {
-      raw
-      references {
-        ... on ContentfulAsset {
-          contentful_id
-          __typename
-          title
-          fixed(width: 750) {
-            src
-          }
-        }
-      }
+      json
     }
   }
 }
 `
 
 const Blog = props => {
+  const options = {
+    renderNode: {
+      "embedded-asset-block": (node) => {
+        const alt = node.data.target.fields.title['en-US']
+        const url = node.data.target.fields.file['en-US'].url
+        return ( <img alt={alt} src={url}/> )
+      }
+    }
+  }
   return (
     <Layout>
       <h1>{props.data.contenfulBlogPost.title}</h1>
