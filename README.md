@@ -1,3 +1,3 @@
 ### Gatsby Project!
 
-[Visit here](https://gatsbydemoport.netlify.app/)
+[Find the project here](https://gatsbydemoport.netlify.app/)
